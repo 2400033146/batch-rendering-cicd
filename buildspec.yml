@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - python3 --version
+      - pip3 install -r requirements.txt
+
+  build:
+    commands:
+      - python3 -m py_compile process_images.py
+
+artifacts:
+  files:
+    - process_images.py
+    - requirements.txtgit add .
